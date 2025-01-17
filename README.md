@@ -35,7 +35,7 @@
 
 1. リポジトリをクローンします。
    ```bash
-   git clone https://github.com/solahsoyalp/UnofficialSAGAWA_LabelSchema_Docs.git
+   git clone https://github.com/solahsoyalp/SAGAWA_LabelSchema_Docs_Unofficial.git
    ```
 2. `docs` フォルダ内の各ファイルを参照してください。
 
