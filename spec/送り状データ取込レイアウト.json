@@ -1,0 +1,693 @@
+{
+  "title": "送り状データ取込レイアウト",
+  "direction": "import",
+  "meta": {
+    "encoding": "Shift_JIS (CP932)",
+    "delimiter": ",",
+    "quote": "なし",
+    "newline": "CRLF",
+    "header": false
+  },
+  "source": {
+    "manual": "https://e-hiden3.sagawa-exp.co.jp/help_nsx/manual-takuhai.pdf",
+    "note": "本仕様は公式マニュアルおよび公開資料を元に整理した非公式情報です。"
+  },
+  "fields": [
+    {
+      "name": "お届け先コード取得区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "お届け先の住所録を登録した際のサービス種別を選択 <br>0 :飛脚宅配便 <br>1 :サービス共通",
+      "codes": {
+        "0": "飛脚宅配便",
+        "1": "サービス共通"
+      }
+    },
+    {
+      "name": "お届け先コード",
+      "length": "12",
+      "type": "半角文字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "お届け先電話番号",
+      "length": "14",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "お届け先郵便番号",
+      "length": "8",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "お届け先住所1(必須)",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "お届け先住所2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "お届け先住所3",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "お届け先名称1(必須)",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "お届け先名称2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "お客様管理番号",
+      "length": "16",
+      "type": "半角英数",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "お客様コード",
+      "length": "12",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "部署ご担当者コード取得区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "部署ご担当者を登録した際のサービス種別を選択 <br>0 :飛脚宅配便 <br>1 :サービス共通",
+      "codes": {
+        "0": "飛脚宅配便",
+        "1": "サービス共通"
+      }
+    },
+    {
+      "name": "部署ご担当者コード",
+      "length": "4",
+      "type": "半角英数",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "部署ご担当者名称",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※荷送人の部署ご担当者",
+      "codes": null
+    },
+    {
+      "name": "荷送人電話番号",
+      "length": "14",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主コード取得区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "ご依頼主の住所録を登録した際のサービス種別を選択 <br>0 :飛脚宅配便 <br>1 :サービス共通",
+      "codes": {
+        "0": "飛脚宅配便",
+        "1": "サービス共通"
+      }
+    },
+    {
+      "name": "ご依頼主コード",
+      "length": "12",
+      "type": "半角英数",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主電話番号",
+      "length": "14",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主郵便番号",
+      "length": "8",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主住所1",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主住所2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主名称1",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "ご依頼主名称2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "荷姿",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "001 :箱類 <br>002 :バッグ類 <br>003 :スーツケース <br>004 :封筒類 <br>005 :ゴルフバッグ <br>006 :スキー <br>007 :スノーボード <br>008 :その他",
+      "codes": {
+        "001": "箱類",
+        "002": "バッグ類",
+        "003": "スーツケース",
+        "004": "封筒類",
+        "005": "ゴルフバッグ",
+        "006": "スキー",
+        "007": "スノーボード",
+        "008": "その他"
+      }
+    },
+    {
+      "name": "品名1",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "品名2",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "品名3",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "品名4",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "品名5",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札荷姿",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "001 :箱類 <br>002 :バッグ類 <br>003 :スーツケース <br>004 :封筒類 <br>005 :ゴルフバッグ <br>006 :スキー <br>007 :スノーボード <br>008 :その他",
+      "codes": {
+        "001": "箱類",
+        "002": "バッグ類",
+        "003": "スーツケース",
+        "004": "封筒類",
+        "005": "ゴルフバッグ",
+        "006": "スキー",
+        "007": "スノーボード",
+        "008": "その他"
+      }
+    },
+    {
+      "name": "荷札品名1",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名2",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名3",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名4",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名5",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名6",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名7",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名8",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名9",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名10",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "荷札品名11",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "出荷個数",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "スピード指定",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "000 :飛脚宅配便 <br>003 :飛脚航空便(翌日中配達) <br>004 :飛脚航空便(翌日午前中配達) <br>005 :飛脚ジャストタイム便",
+      "codes": {
+        "000": "飛脚宅配便",
+        "003": "飛脚航空便(翌日中配達)",
+        "004": "飛脚航空便(翌日午前中配達)",
+        "005": "飛脚ジャストタイム便"
+      }
+    },
+    {
+      "name": "クール便指定",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "001 :指定なし <br>002 :飛脚クール便(冷蔵) <br>003 :飛脚クール便(冷凍)",
+      "codes": {
+        "001": "指定なし",
+        "002": "飛脚クール便(冷蔵)",
+        "003": "飛脚クール便(冷凍)"
+      }
+    },
+    {
+      "name": "配達日",
+      "length": "8",
+      "type": "半角数字",
+      "required": false,
+      "desc": "例)20210201(2021年2月1日を指定する場合)",
+      "codes": null
+    },
+    {
+      "name": "配達指定時間帯",
+      "length": "2",
+      "type": "半角数字",
+      "required": false,
+      "desc": "01 : 午前中 <br>14 : 14:00~16:00 <br>18 : 18:00~20:00 <br>19 : 19:00~21:00 <br>12 : 12:00~14:00 <br>16 : 16:00~18:00 <br>04 : 18:00~21:00",
+      "codes": {
+        "01": "午前中",
+        "14": "14:00~16:00",
+        "18": "18:00~20:00",
+        "19": "19:00~21:00",
+        "12": "12:00~14:00",
+        "16": "16:00~18:00",
+        "04": "18:00~21:00"
+      }
+    },
+    {
+      "name": "配達指定時間(時分)",
+      "length": "4",
+      "type": "半角数字",
+      "required": false,
+      "desc": "例)1530 (15時30分を指定する場合) <br>※ 飛脚ジャストタイム便利用時のみ指定可能 <br>※ “分”の値は「00」または「30」の30分単位で指定可能",
+      "codes": null
+    },
+    {
+      "name": "代引金額",
+      "length": "7",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "消費税",
+      "length": "6",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "決済種別",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0 :指定なし <br>1 :全て可 <br>2 :現金のみ <br>3 :デビット・クレジット",
+      "codes": {
+        "0": "指定なし",
+        "1": "全て可",
+        "2": "現金のみ",
+        "3": "デビット・クレジット"
+      }
+    },
+    {
+      "name": "保険金額",
+      "length": "8",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0~49999999の範囲で指定可能",
+      "codes": null
+    },
+    {
+      "name": "指定シール1",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "001 :飛脚クール便(冷蔵) <br>002 :飛脚クール便(冷凍) <br>004 :営業所受取サービス <br>005 :指定日配達サービス <br>008 :eコレクト(現金) <br>009 :eコレクト(デビット/クレジット) <br>010 :eコレクト(全て可能) <br>011 :取扱注意 <br>012 :貴重品 <br>013 :天地無用 <br>017 :飛脚航空便 <br>018 :飛脚ジャストタイム便 <br>020 :時間帯指定サービス(午前中) <br>021 :時間帯指定サービス(18時~21時) <br>022 :時間帯指定サービス(12時~14時) <br>023 :時間帯指定サービス(14時~16時) <br>024 :時間帯指定サービス(16時~18時) <br>025 :時間帯指定サービス(18時~20時) <br>026 :時間帯指定サービス(19時~21時)",
+      "codes": {
+        "001": "飛脚クール便(冷蔵)",
+        "002": "飛脚クール便(冷凍)",
+        "004": "営業所受取サービス",
+        "005": "指定日配達サービス",
+        "008": "eコレクト(現金)",
+        "009": "eコレクト(デビット/クレジット)",
+        "010": "eコレクト(全て可能)",
+        "011": "取扱注意",
+        "012": "貴重品",
+        "013": "天地無用",
+        "017": "飛脚航空便",
+        "018": "飛脚ジャストタイム便",
+        "020": "時間帯指定サービス(午前中)",
+        "021": "時間帯指定サービス(18時~21時)",
+        "022": "時間帯指定サービス(12時~14時)",
+        "023": "時間帯指定サービス(14時~16時)",
+        "024": "時間帯指定サービス(16時~18時)",
+        "025": "時間帯指定サービス(18時~20時)",
+        "026": "時間帯指定サービス(19時~21時)"
+      }
+    },
+    {
+      "name": "指定シール2",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "指定シール3",
+      "length": "3",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "営業所受取",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0 :通常出荷 <br>1 :営業所受取",
+      "codes": {
+        "0": "通常出荷",
+        "1": "営業所受取"
+      }
+    },
+    {
+      "name": "SRC区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0 :指定なし <br>1 :SRC",
+      "codes": {
+        "0": "指定なし",
+        "1": "SRC"
+      }
+    },
+    {
+      "name": "営業所受取営業店コード",
+      "length": "4",
+      "type": "半角数字",
+      "required": false,
+      "desc": "省略時はお届け先住所よりセット",
+      "codes": null
+    },
+    {
+      "name": "元着区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "1 :元払 <br>2 :着払",
+      "codes": {
+        "1": "元払",
+        "2": "着払"
+      }
+    },
+    {
+      "name": "メールアドレス",
+      "length": "100",
+      "type": "半角文字 (メールアドレス形式)",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "ご不在時連絡先",
+      "length": "14",
+      "type": "半角数字 \"-\"ハイフン",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "出荷日",
+      "length": "8",
+      "type": "半角数字",
+      "required": false,
+      "desc": "例)20210201(2021年2月1日を出荷日とする場合)",
+      "codes": null
+    },
+    {
+      "name": "お問い合せ送り状No.",
+      "length": "12",
+      "type": "半角数字",
+      "required": false,
+      "desc": "※ユーザ採番用お問い合せ送り状No.が設定されている場合のみ <br>省略時はシステムにて自動採番",
+      "codes": null
+    },
+    {
+      "name": "出荷場印字区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0 :印字しない <br>1 :印字する",
+      "codes": {
+        "0": "印字しない",
+        "1": "印字する"
+      }
+    },
+    {
+      "name": "集約解除指定",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0 :しない <br>1 :する",
+      "codes": {
+        "0": "しない",
+        "1": "する"
+      }
+    },
+    {
+      "name": "編集01",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集02",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集03",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集04",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集05",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集06",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集07",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集08",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集09",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    },
+    {
+      "name": "編集10",
+      "length": "32",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角:16桁 半角:32桁 全半角混在は全角へ変換",
+      "codes": null
+    }
+  ]
+}

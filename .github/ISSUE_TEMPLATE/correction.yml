@@ -1,0 +1,45 @@
+name: 仕様の誤り報告 / 修正提案
+description: レイアウトやコード値の誤り・古い情報の報告
+title: "[修正] "
+labels: ["correction"]
+body:
+  - type: dropdown
+    id: target
+    attributes:
+      label: 対象資料
+      options:
+        - 送り状データ取込レイアウト
+        - 送り状データ出力レイアウト
+        - メール便データ取込レイアウト
+        - メール便データ出力レイアウト
+        - 出荷履歴データ出力レイアウト
+        - 住所録データ取込レイアウト
+        - 住所録データ出力レイアウト
+        - 荷姿・品名データ取込レイアウト
+        - 荷姿・品名データ出力レイアウト
+        - 部署ご担当者データ取込レイアウト
+        - 部署ご担当者データ出力レイアウト
+        - 荷物状況データ出力レイアウト
+        - 集配状態コード一覧
+        - 貨物消込集配状態コード
+        - 離島地域
+        - その他
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: 該当項目名
+      placeholder: 例）お届け先郵便番号
+  - type: textarea
+    id: detail
+    attributes:
+      label: 誤りの内容と正しい情報
+      placeholder: 現状の記載と、正しいと考えられる内容（桁数・属性・コード値など）
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 出典 / 根拠
+      placeholder: 公式マニュアルの該当箇所・バージョン・URL など

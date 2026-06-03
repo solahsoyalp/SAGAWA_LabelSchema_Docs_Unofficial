@@ -1,0 +1,97 @@
+{
+  "title": "メール便データ取込レイアウト",
+  "direction": "import",
+  "meta": {
+    "encoding": "Shift_JIS (CP932)",
+    "delimiter": ",",
+    "quote": "なし",
+    "newline": "CRLF",
+    "header": false
+  },
+  "source": {
+    "manual": "https://e-hiden3.sagawa-exp.co.jp/help_nsx/manual-takuhai.pdf",
+    "note": "本仕様は公式マニュアルおよび公開資料を元に整理した非公式情報です。"
+  },
+  "fields": [
+    {
+      "name": "利用可能サービス区分",
+      "length": "2",
+      "type": "半角数字",
+      "required": false,
+      "desc": "お届け先の住所録を登録した際の利用可能サービスを選択（00：通常、99：サービス共通）",
+      "codes": null
+    },
+    {
+      "name": "住所録コード（お届け先）",
+      "length": "12",
+      "type": "半角文字",
+      "required": false,
+      "desc": "住所録マスタのお届け先コード",
+      "codes": null
+    },
+    {
+      "name": "電話番号（お届け先）",
+      "length": "14",
+      "type": "半角数字",
+      "required": false,
+      "desc": "\"-\"ハイフン含む",
+      "codes": null
+    },
+    {
+      "name": "郵便番号（お届け先）",
+      "length": "8",
+      "type": "半角数字",
+      "required": false,
+      "desc": "\"-\"ハイフン含む",
+      "codes": null
+    },
+    {
+      "name": "住所1（お届け先）（必須）",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "住所2（お届け先）",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "住所3（お届け先）",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "名称1（お届け先）（必須）",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "名称2（お届け先）",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "顧客番号（荷送人）",
+      "length": "12",
+      "type": "半角数字",
+      "required": false,
+      "desc": "荷送人のお客様コード",
+      "codes": null
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "title": "住所録データ取込レイアウト",
+  "direction": "import",
+  "meta": {
+    "encoding": "Shift_JIS (CP932)",
+    "delimiter": ",",
+    "quote": "なし",
+    "newline": "CRLF",
+    "header": false
+  },
+  "source": {
+    "manual": "https://e-hiden3.sagawa-exp.co.jp/help_nsx/manual-takuhai.pdf",
+    "note": "本仕様は公式マニュアルおよび公開資料を元に整理した非公式情報です。"
+  },
+  "fields": [
+    {
+      "name": "住所録コード（必須）",
+      "length": "12",
+      "type": "半角文字",
+      "required": true,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "住所録区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "1：お届け先 2：ご依頼主",
+      "codes": {
+        "1": "お届け先 2：ご依頼主"
+      }
+    },
+    {
+      "name": "サービス種別",
+      "length": "2",
+      "type": "半角数字",
+      "required": false,
+      "desc": "住所録を使用するサービスを選択（00：通常、01：飛脚大型家具家電設置便、02：受取人確認、03：飛脚特定信書便、04：飛脚特定信書便受取人確認、07：小口ハンガー便、08：大口ハンガー便、09：飛脚精密機器宅配便、10：セキュリティサービス、99：サービス共通）",
+      "codes": null
+    },
+    {
+      "name": "電話番号",
+      "length": "14",
+      "type": "半角数字",
+      "required": false,
+      "desc": "\"-\"ハイフン含む",
+      "codes": null
+    },
+    {
+      "name": "郵便番号",
+      "length": "8",
+      "type": "半角数字",
+      "required": false,
+      "desc": "\"-\"ハイフン含む",
+      "codes": null
+    },
+    {
+      "name": "住所1（必須）",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "住所2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "住所3",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "名称1（必須）",
+      "length": "16",
+      "type": "全角文字",
+      "required": true,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "名称2",
+      "length": "16",
+      "type": "全角文字",
+      "required": false,
+      "desc": "※半角文字は全角文字に変換",
+      "codes": null
+    },
+    {
+      "name": "営業所受取",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0：通常出荷 1：営業所受取",
+      "codes": {
+        "0": "通常出荷 1：営業所受取"
+      }
+    },
+    {
+      "name": "SRC区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0：指定なし 1：SRC",
+      "codes": {
+        "0": "指定なし 1：SRC"
+      }
+    },
+    {
+      "name": "営業所受取営業所コード",
+      "length": "4",
+      "type": "半角数字",
+      "required": false,
+      "desc": "省略時はお届け先住所よりセット",
+      "codes": null
+    },
+    {
+      "name": "メールアドレス",
+      "length": "100",
+      "type": "半角文字",
+      "required": false,
+      "desc": "(メールアドレス形式)",
+      "codes": null
+    },
+    {
+      "name": "ご不在時連絡先",
+      "length": "14",
+      "type": "半角数字",
+      "required": false,
+      "desc": "\"-\"ハイフン含む",
+      "codes": null
+    },
+    {
+      "name": "初期荷送人",
+      "length": "12",
+      "type": "半角数字",
+      "required": false,
+      "desc": "",
+      "codes": null
+    },
+    {
+      "name": "一括出荷区分",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0：含めない 1：含める",
+      "codes": {
+        "0": "含めない 1：含める"
+      }
+    },
+    {
+      "name": "元着優先",
+      "length": "1",
+      "type": "半角数字",
+      "required": false,
+      "desc": "0：なし 1：元払 2：着払",
+      "codes": {
+        "0": "なし 1：元払 2：着払"
+      }
+    },
+    {
+      "name": "グループ名称",
+      "length": "20",
+      "type": "全半角文字",
+      "required": false,
+      "desc": "※全角：10桁 半角：20桁",
+      "codes": null
+    }
+  ]
+}
