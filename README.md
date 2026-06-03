@@ -1,4 +1,4 @@
-# Unofficial SAGAWA Label SchemaDocs
+# Unofficial SAGAWA Label Schema Docs
 
 ## 概要
 
